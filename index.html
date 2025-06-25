@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Finance Portal - Login</title>
+  <title>Loan Management Portal - Login</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login to Loan Management Portal</h2>
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="Username" required />
-      <input type="password" id="password" placeholder="Password" required />
+  <main class="login-container">
+    <h1>Loan Management Portal</h1>
+    <form id="loginForm" autocomplete="off">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required />
+
       <button type="submit">Login</button>
-      <p id="error" style="color: red;"></p>
+
+      <p id="error" class="error-message"></p>
     </form>
-  </div>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
