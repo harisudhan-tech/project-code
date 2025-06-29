@@ -1,46 +1,28 @@
-# 💼 Loan Management Portal
+ Loan Management Portal
 
 A simple web-based information system for a finance company to manage customer loan data, built using HTML, CSS, and JavaScript with localStorage and sessionStorage for data and session handling.
 
----
 
-## 📌 Features
+ Features
 
-- 🔐 Login system with authentication and session handling
-- 👥 Role-based access control (Admin and Customer)
-- 📁 Admin Dashboard:
+-  Login system with authentication and session handling
+-  Role-based access control (Admin and Customer)
+-  Admin Dashboard:
   - View all customer loan records
   - Add, Edit, and Delete loans
   - Search by name or account number
-- 📄 Customer Dashboard:
+-  Customer Dashboard:
   - View personal loan data (read-only)
-- 💾 Uses `localStorage` for loan data (temporary)
-- 🧠 Uses `sessionStorage` to store logged-in user sessions
+- Uses `localStorage` for loan data (temporary)
+-  Uses `sessionStorage` to store logged-in user sessions
 
 ---
 
-## 👤 User Roles
+ User Roles
 
 | Role     | Login Example     | Permissions                       |
 |----------|-------------------|-----------------------------------|
 | Admin    | `hari@admin`      | Full CRUD access to all loans     |
 | Customer | `alice`           | View own loan details only        |
 
-> Role is detected using the `@admin` suffix in the email address.
-
----
-
-## 🧾 Loan Data Structure
-
-Each loan record includes:
-
-```json
-{
-  "name": "Alice Smith",
-  "accountNumber": 1001,
-  "loanAmount": 50000,
-  "emiPlan": 12,
-  "email": "alice",
-  "phone": "1234567890",
-  "overdue": 2000
-}
+Role is detected using the `@admin` suffix in the email address
