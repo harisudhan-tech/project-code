@@ -1,8 +1,6 @@
  Loan Management Portal
 
 A simple web-based information system for a finance company to manage customer loan data, built using HTML, CSS, and JavaScript with localStorage and sessionStorage for data and session handling.
-
-
  Features
 
 -  Login system with authentication and session handling
@@ -16,13 +14,3 @@ A simple web-based information system for a finance company to manage customer l
 - Uses `localStorage` for loan data (temporary)
 -  Uses `sessionStorage` to store logged-in user sessions
 
----
-
- User Roles
-
-| Role     | Login Example     | Permissions                       |
-|----------|-------------------|-----------------------------------|
-| Admin    | `hari@admin`      | Full CRUD access to all loans     |
-| Customer | `alice`           | View own loan details only        |
-
-Role is detected using the `@admin` suffix in the email address
