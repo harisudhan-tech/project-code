@@ -1,0 +1,30 @@
+// js/auth.js
+
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+  const errorMsg = document.getElementById('errorMsg');
+
+  // Dummy password check (for demo)
+  // Let's say any password with length >= 4 is valid for now
+  if (!email || !password) {
+    errorMsg.textContent = 'Please enter both email and password.';
+    return;
+  }
+  if (password.length < 4) {
+    errorMsg.textContent = 'Password must be at least 4 characters.';
+    return;
+  }
+
+  // Store session
+  sessionStorage.setItem('loggedInUser', email);
+
+  // Redirect based on role
+  if (email.endsWith('@admin')) {
+    window.location.href = 'admin.html';
+  } else {
+    window.location.href = 'customer.html';
+  }
+});
