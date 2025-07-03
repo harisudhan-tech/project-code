@@ -1,0 +1,51 @@
+// utils.js
+
+// Load loan data from localStorage
+function getLoanData() {
+  return JSON.parse(localStorage.getItem('loanData')) || [];
+}
+
+// Save loan data to localStorage
+function setLoanData(data) {
+  localStorage.setItem('loanData', JSON.stringify(data));
+}
+
+// Generate a random 6-digit account number
+function generateAccountNumber() {
+  return Math.floor(100000 + Math.random() * 900000);
+}
+
+// Format number as currency (INR)
+function formatCurrency(amount) {
+  return `₹${Number(amount).toLocaleString('en-IN')}`;
+}
+
+// Search for loans by name or account number
+function searchLoans(keyword, loans) {
+  keyword = keyword.toLowerCase();
+  return loans.filter(loan =>
+    loan.name.toLowerCase().includes(keyword) ||
+    loan.accountNumber.toString().includes(keyword)
+  );
+}
+
+// Validate loan input fields (basic check)
+function validateLoanInput(loan) {
+  return (
+    loan.name &&
+    loan.accountNumber &&
+    loan.loanAmount >= 0 &&
+    loan.emiPlan > 0 &&
+    loan.email &&
+    loan.phone &&
+    loan.overdue >= 0
+  );
+}
+
+// Capitalize first letter of name
+function capitalizeName(name) {
+  return name
+    .split(' ')
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(' ');
+}
